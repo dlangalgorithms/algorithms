@@ -4,7 +4,7 @@ import std.algorithm : sort;
      * Link: https://www.geeksforgeeks.org/problems/majority-vote/1
      * 
      * Majority Element II
-     * Difficulty: MediumAccuracy
+     * Difficulty: Medium
      *
      * Problem:
      * You are given an array of integer int[] where each number represents a vote to a candidate.
