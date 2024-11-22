@@ -17,6 +17,8 @@ import std.algorithm : sort;
  * Example:
  * n = 86240 should return "(2**5)(5)(7**2)(11)"
  * 
+ * Tags: Fundamentals, Mathematics
+ * 
 */
 string primeFactors(long n) {    
     string result;
