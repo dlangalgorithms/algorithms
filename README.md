@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/dlangalgorithms/Algorithms/blob/main/branding/logo.png" width="200">
+  <img src="branding/logo.png" width="200">
 
 <h1> Algorithms </h1>
 All algorithms implemented in D
