@@ -26,7 +26,4 @@ unittest {
     
 }
 
-/*Program tests are performed above in the unittest block*/
-int main(){
-    return 0;
-}
+void main(){}

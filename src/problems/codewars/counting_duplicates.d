@@ -58,7 +58,4 @@ unittest {
     assert(duplicate_count("ABBA") == 2);
 }
 
-// Program tests are performed above in the unittest block
-int main(){
-    return 0;
-}
+void main(){}

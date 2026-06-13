@@ -146,7 +146,4 @@ unittest{
     assert(testExpr("2 * 3 * 4 + (2 * 4)") == 32);
 }
 
-/*Program tests are performed above in the unittest block*/
-int main() {
-    return 0;
-}
+void main(){}

@@ -49,7 +49,4 @@ unittest {
     writeln(max_profit1); // Output result
 }
 
-/**
-    Program tests are performed above in the unittest block
- */
-void main() {}
+void main(){}

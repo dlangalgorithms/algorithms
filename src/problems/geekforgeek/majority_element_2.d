@@ -66,7 +66,4 @@ unittest {
     assert(find_majority([1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]) == []);
 }
 
-// Program tests are performed above in the unittest block
-int main(){
-    return 0;
-}
+void main(){}

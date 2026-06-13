@@ -164,8 +164,4 @@ unittest {
     
 }
 
-/**
- * Program tests are performed above in the unittest block.
- * The main function is empty as tests are run automatically.
- */
-void main() {}
+void main(){}

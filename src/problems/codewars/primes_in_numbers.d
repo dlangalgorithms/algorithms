@@ -54,6 +54,4 @@ unittest {
     assert(primeFactors(933555431) == "(7537)(123863)");
 }
 
-void main() {
-
-}
+void main(){}
