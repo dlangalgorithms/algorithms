@@ -11,7 +11,7 @@
 *	becomes empty.
 */
 
-int binarySort(int[] array, int target) {
+int binarySearch(int[] array, int target) {
 	int left = 0;
 	int right = cast(int)array.length-1;
 	while(left <= right) {
@@ -30,7 +30,7 @@ int binarySort(int[] array, int target) {
 
 unittest {
 	int[] array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-	assert(binarySort(array, 3) == 2);
+	assert(binarySearch(array, 3) == 2);
 }
 
 void main() {}
