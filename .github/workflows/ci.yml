@@ -1,0 +1,30 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install LDC
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ldc
+
+      - name: Build and run unit tests
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          shopt -s globstar nullglob
+          for source in src/**/*.d; do
+            binary="$(basename "${source%.d}")"
+            ldc2 -unittest -main "$source" -of="$RUNNER_TEMP/$binary"
+            "$RUNNER_TEMP/$binary"
+          done
