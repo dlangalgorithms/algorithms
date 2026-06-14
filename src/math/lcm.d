@@ -3,11 +3,11 @@ import std;
 
 /*
  * Least Common Multiple (LCM) Calculation - Computes the smallest positive integer that is divisible by both of two given integers. This implementation uses the relationship LCM(a, b) = |a * b| / GCD(a, b).
- * 1) Handle the base case: if either input integer is 0, the LCM is defined as 0.
- * 2) Ensure both input numbers 'a' and 'b' are positive by taking their absolute values if they are negative.
- * 3) Calculate the product of 'a' and 'b' and store it in 'result'. This will be used later.
- * 4) Employ the Euclidean algorithm to find the Greatest Common Divisor (GCD) of 'a' and 'b'. This involves repeatedly taking the remainder until 'b' becomes 0, at which point 'a' holds the GCD.
- * 5) Divide the pre-calculated product ('result') by the GCD found in the previous step. This division yields the LCM.
+ * 1) In the first condition, if any of the inputs (a, b) are zero, return 0.
+ * 2) if any of inputs are negative number, we take the absolute value of that.
+ * 3) @param result = to store the output and multiply two inputs
+ * 4) in the While loop, we take GCD of the two inputs
+ * 5) in the end, we multiply the two inputs, divide by their GCD, and return this.
  */
 long lcm(long a , long b){
     if (a == 0 || b == 0) {

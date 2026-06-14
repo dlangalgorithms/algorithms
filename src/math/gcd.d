@@ -2,12 +2,12 @@ import std;
 
 /*
  * Greatest Common Divisor (GCD) Calculation - Computes the largest positive integer that divides two integers without leaving a remainder. This implementation uses the iterative Euclidean algorithm.
- * 1) Handle the base case: if either input integer is 0, the GCD is defined as 0.
- * 2) Initiate a loop that continues as long as the second integer (b) is not zero.
- * 3) Inside the loop, store the current value of 'b' in a temporary variable 'temp'.
- * 4) Update 'b' to be the remainder of 'a' divided by 'b' (a % b).
- * 5) Update 'a' to be the value stored in 'temp'. This effectively replaces 'a' with the previous 'b', and 'b' with the remainder.
- * 6) When the loop terminates (meaning 'b' has become 0), the value of 'a' holds the GCD of the original two numbers.
+ * 1) if either input int is 0, the GCD is defined as 0.
+ * 2) This loop continues until b is zero.
+ * 3) @param temp = store the value of b temporarily before updating b to a % b.
+ * 4) b = a % b = update b to the remainder of a divided by b, which is the key step in the Euclidean algorithm.
+ * 5) a = temp = update a to the previous value of b.
+ * 6) in the end return a which is the GCD of the original pair of integers.
  */
 long gcd(long a, long b) {
     if (a == 0 || b == 0) {

@@ -2,13 +2,13 @@ import std;
 
 /*
  * Prime Sieve - Generates all prime numbers up to a specified limit N using the Sieve of Eratosthenes algorithm.
- * 1) Handle the edge case: if N is less than 2, return an empty array as there are no primes below 2.
- * 2) Initialize a boolean array 'is_prime' of size N+1, marking all entries as true, assuming all numbers are potentially prime initially.
- * 3) Explicitly mark 0 and 1 as not prime by setting their corresponding entries in 'is_prime' to false.
- * 4) Iterate from i = 2 up to the square root of N. For each 'i':
- *    a) If 'is_prime[i]' is true (meaning 'i' is considered prime), then mark all multiples of 'i' (starting from i*i) up to N as not prime by setting their 'is_prime' entries to false.
- * 5) After the sieving process, iterate through the 'is_prime' array from 2 to N.
- * 6) Collect all numbers 'i' for which 'is_prime[i]' is true into a result array. These are the prime numbers up to N.
+ * 1) in the first, we check that the input cannot be less than 2 because it is not a prime number
+ * 2) @param is_prime = we create a boolean array(One of larger ones from input(n)) To save valid outputs.
+ * 3) first we set the entire array to true.
+ * 4) we set members 0 and 1 to false Because 0 , 1  are not prime
+ * 5) in the loop, we check whether the current number is prime or not, and if not, saved in is_prime array
+ * 6) @param primes = to store prime numbers for return
+ * 7) in the end, checking values inside out validator array and added in primes array, return primes.
  */
 int[] prime_sieve(int n){
     if(n < 2) return [];

@@ -1,9 +1,9 @@
 /*
  * Floor Calculation - Computes the largest integer value that is less than or equal to a given floating-point number.
- * 1) Calculate the remainder when the input number is divided by 1. This isolates the fractional part.
- * 2) If the input number is positive and has a non-zero remainder, the floor is the number without its fractional part. This is achieved by subtracting the remainder.
- * 3) If the input number is negative and has a non-zero remainder, we need to round down to the next lower integer. This is achieved by subtracting the remainder and then subtracting an additional 1.
- * 4) If the input number is already an integer (remainder is zero), it is returned as is.
+ * 1) @param rem = for get remainder of number when divided by 1
+ * 2)  in first if = if number is Positive and rem not zero(it has remainder) then number - rem
+ * 3)  in second if = if number is Negative and rem not zero(it has remainder) then number - rem - 1
+ * 4)  if number is already an integer then return the number as is
  */
 double floor(double x) {    
     double rem = x % 1;

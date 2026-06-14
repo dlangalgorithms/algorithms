@@ -2,11 +2,11 @@ import std;
 
 /*
  * Prime Check - A comparison-based algorithm to determine if an integer is a prime number.
- * 1) First, we check the base cases: any number less than or equal to 1 is immediately classified as not prime.
- * 2) The number 2 is evaluated next, as it is the only even prime number in mathematics.
- * 3) All other even numbers are excluded right away by checking if they are divisible by 2.
- * 4) For remaining odd numbers, we iterate through odd factors starting from 3 up to the square root of the number (i * i <= n).
- * 5) If any factor divides the number perfectly, it is classified as composite; otherwise, it is confirmed as a prime number.
+ * 1) first if input n is one return false because 1 is not a prime number.
+ * 2) second if input n is two return true because 2 is a prime number.
+ * 3) third if input n is even and greater than 2 return false because all even numbers greater than 2 are not prime.
+ * 4) start a loop from 3 to the square root of n, incrementing by 2 (to check only odd numbers). If n is divisible by any of these numbers, return false because it means n has a divisor other than 1 and itself. 
+ * 5) in the end return true because if n is not divisible by any number from 2 to the square root of n, it is a prime number.
  */
 
 bool is_prime(int n){
