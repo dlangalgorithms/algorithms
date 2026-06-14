@@ -1,14 +1,18 @@
-module math.lcm;
 
-/// Calculates the Least Common Multiple (LCM) of two integers.
-/// Relies on the relationship between GCD and LCM to find the result.
-///
-/// Params:
-///     a = The first integer.
-///     b = The second integer.
-/// Returns:
-///     The least common multiple of a and b as a long.
+import std;
 
+/**
+ * Calculates the Least Common Multiple (LCM) of two integers.
+ * Relies on the relationship between GCD and LCM to find the result.
+ *
+ * Params:
+ *     a = The first integer.
+ *     b = The second integer.
+ * Returns:
+ *     The least common multiple of a and b as a long.
+ */
+
+ 
 long lcm(long a , long b){
     if (a == 0 || b == 0) {
         return 0;

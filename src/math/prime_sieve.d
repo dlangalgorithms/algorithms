@@ -1,13 +1,14 @@
-module math.prime_sieve;
+import std;
 
-/// Generates all prime numbers up to a given limit N using the Sieve of Eratosthenes.
-/// This algorithm is highly efficient for finding small primes en masse.
-///
-/// Params:
-///     n = The upper bound limit (inclusive) to find primes.
-/// Returns:
-///     An array of integers containing all prime numbers up to n.
-
+/**
+ * Generates all prime numbers up to a given limit N using the Sieve of Eratosthenes.
+ * This algorithm is highly efficient for finding small primes en masse.
+ *
+ * Params:
+ *     n = The upper bound limit (inclusive) to find primes.
+ * Returns:
+ *     An array of integers containing all prime numbers up to n.
+ */
 int[] prime_sieve(int n){
     if(n < 2) return [];
     bool[] is_prime = new bool[n + 1];

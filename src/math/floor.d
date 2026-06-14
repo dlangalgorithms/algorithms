@@ -1,14 +1,12 @@
-module math.floor;
-
-
-/// Calculates the floor of a number.
-/// Returns the largest integer value less than or equal to the given number.
-///
-/// Params:
-///     x = The floating-point number to process.
-/// Returns:
-///     The rounded-down value as a double to prevent integer overflow.
-
+/**
+ * Calculates the floor of a number.
+ * Returns the largest integer value less than or equal to the given number.
+ *
+ * Params:
+ *     x = The floating-point number to process.
+ * Returns:
+ *     The rounded-down value as a double to prevent integer overflow.
+ */
 double floor(double x) {    
     double rem = x % 1;
     if( x > 0 && rem != 0) {

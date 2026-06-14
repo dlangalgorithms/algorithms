@@ -1,13 +1,17 @@
+
 import std;
 
-/// Calculates the ceiling of a number.
-/// Returns the smallest integer value greater than or equal to the given number.
-///
-/// Params:
-///     number = The floating-point number to process.
-/// Returns:
-///     The rounded-up value as a double to prevent integer overflow.
+/**
+ * Calculates the ceiling of a number.
+ * Returns the smallest integer value greater than or equal to the given number.
+ *
+ * Params:
+ *     number = The floating-point number to process.
+ * Returns:
+ *     The rounded-up value as a double to prevent integer overflow.
+ */
 
+ 
 double ceil(double number){
     double rem = number % 1;
     if( number > 0 && rem != 0) {

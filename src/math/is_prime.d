@@ -1,12 +1,14 @@
-module math.is_prime;
+import std;
 
-/// Checks whether a given integer is a prime number.
-/// Utilizes trial division up to the square root of the number for efficiency.
-///
-/// Params:
-///     n = The integer to check.
-/// Returns:
-///     true if the number is prime, false otherwise.
+/**
+ * Checks whether a given integer is a prime number.
+ * Utilizes trial division up to the square root of the number for efficiency.
+ *
+ * Params:
+ *     n = The integer to check.
+ * Returns:
+ *     true if the number is prime, false otherwise.
+ */
 
 bool is_prime(int n){
     if(n <= 1) return false;

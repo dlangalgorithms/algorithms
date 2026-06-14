@@ -1,15 +1,17 @@
-module math.gcd;
+import std;
 
-/// Calculates the Greatest Common Divisor (GCD) of two integers.
-/// Uses the efficient iterative Euclidean algorithm.
-///
-/// Params:
-///     a = The first integer.
-///     b = The second integer.
-/// Returns:
-///     The greatest common divisor of a and b as a long.
+/**
+ * Calculates the Greatest Common Divisor (GCD) of two integers.
+ * Uses the efficient iterative Euclidean algorithm.
+ *
+ * Params:
+ *     a = The first integer.
+ *     b = The second integer.
+ * Returns:
+ *     The greatest common divisor of a and b as a long.
+ */
 
-
+ 
 long gcd(long a, long b) {
     if (a == 0 || b == 0) {
         return 0;

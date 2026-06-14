@@ -1,13 +1,14 @@
-module math.round;
+import std;
 
-/// Rounds a floating-point number to the nearest integer value.
-/// Halfway cases (0.5 or -0.5) are rounded away from zero.
-///
-/// Params:
-///     x = The floating-point number to process.
-/// Returns:
-///     The rounded value as a double to prevent integer overflow.
-
+/**
+ * Rounds a floating-point number to the nearest integer value.
+ * Halfway cases (0.5 or -0.5) are rounded away from zero.
+ *
+ * Params:
+ *     x = The floating-point number to process.
+ * Returns:
+ *     The rounded value as a double to prevent integer overflow.
+ */
 double round(double x){
     double rem = x % 1;
     if (rem >= 0.5 && x > 0){
