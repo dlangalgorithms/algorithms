@@ -1,9 +1,9 @@
-/*
-*	Quick sort is a sorting algorithm that belongs to the "divide and conquer" algorithms.
+/**
+*	## Quick sort is a sorting algorithm that belongs to the "divide and conquer" algorithms.
 *	It works by choosing a pivot element from the array and dividing it into two subarrays, where one
 *	array contains elements less than the pivot, and the other contains elements greater than the pivot, then the arrays 
 *	are sorted recursively and later combined together.
-*	Steps to implement the algorithm:
+*	### Steps to implement the algorithm:
 *	1. If the length of the array is less than two, return it since it does not need to be sorted.
 *	2. Choose an element that will serve as the pivot.
 *	3. Divide the array into two subarrays with elements less than the pivot and elements greater than the pivot.
