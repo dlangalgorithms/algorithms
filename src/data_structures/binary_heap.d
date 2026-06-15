@@ -2,9 +2,9 @@ import std.stdio;
 import std.algorithm : swap;
 
 /**
- * Implementation of a Min Heap (Minimum Priority Queue) data structure.
- * A Min Heap is a complete binary tree where the value of each node is 
- * less than or equal to the values of its children.
+ * **Implementation of a Min Heap (Minimum Priority Queue) data structure.**
+ * **A Min Heap is a complete binary tree where the value of each node is** 
+ * **less than or equal to the values of its children.**
  */
 class MinHeap {
     private int[] harr;      // Array to store heap elements
@@ -14,7 +14,8 @@ class MinHeap {
     /**
      * Constructs a new MinHeap with the specified capacity.
      *
-     * @param cap the maximum number of elements the heap can hold
+     * Params:
+     * cap = the maximum number of elements the heap can hold
      */
     this(int cap) {
         heap_size = 0;
@@ -25,7 +26,8 @@ class MinHeap {
     /**
      * Recursively heapifies a subtree rooted at index i to maintain the min-heap property.
      *
-     * @param i the index of the root node of the subtree to heapify
+     * Params:
+     * i = the index of the root node of the subtree to heapify
      */
     void minHeapify(int i) {
         int l = left(i);     // Index of left child
@@ -48,24 +50,30 @@ class MinHeap {
     /**
      * Returns the index of the parent node for a given index.
      *
-     * @param i the index of the child node
-     * @return the index of the parent node
+     * Params:
+     * i = the index of the child node
+     * Returns:
+     * the index of the parent node
      */
     int parent(int i) { return (i - 1) / 2; }
 
     /**
      * Returns the index of the left child for a given index.
      *
-     * @param i the index of the parent node
-     * @return the index of the left child node
+     * Params :
+     * i = the index of the parent node
+     * Returns:
+     * the index of the left child node
      */
     int left(int i) { return (2 * i + 1); }
 
     /**
      * Returns the index of the right child for a given index.
      *
-     * @param i the index of the parent node
-     * @return the index of the right child node
+     * Params:
+     * i = the index of the parent node
+     * Returns:
+     * the index of the right child node
      */
     int right(int i) { return (2 * i + 2); }
 
@@ -73,7 +81,8 @@ class MinHeap {
      * Removes and returns the minimum element (root) from the heap.
      * Maintains the heap property after removal.
      *
-     * @return the minimum element in the heap, or int.max if heap is empty
+     * Returns:
+     * the minimum element in the heap, or int.max if heap is empty
      */
     int extractMin() {
         if (heap_size <= 0)
@@ -95,8 +104,10 @@ class MinHeap {
      * Decreases the value of a key at the specified index to a new value.
      * Adjusts the heap to maintain the min-heap property.
      *
-     * @param i the index of the key to decrease
-     * @param new_val the new value for the key (must be smaller than current value)
+     * Params:
+     * i = the index of the key to decrease
+     * Params:
+     * new_val = the new value for the key (must be smaller than current value)
      */
     void decreaseKey(int i, int new_val) {
         harr[i] = new_val;
@@ -110,14 +121,16 @@ class MinHeap {
     /**
      * Returns the minimum element from the heap without removing it.
      *
-     * @return the minimum element in the heap (root element)
+     * Returns:
+     * the minimum element in the heap (root element)
      */
     int getMin() { return harr[0]; }
 
     /**
      * Deletes a key at the specified index from the heap.
      *
-     * @param i the index of the key to delete
+     * Params:
+     * i = the index of the key to delete
      */
     void deleteKey(int i) {
         decreaseKey(i, int.min);  // Decrease key to minimum value
@@ -128,7 +141,8 @@ class MinHeap {
      * Inserts a new key into the heap.
      * Maintains the heap property after insertion.
      *
-     * @param k the key value to insert
+     * Params: 
+     * k = the key value to insert
      */
     void insertKey(int k) {
         if (heap_size == capacity) {
