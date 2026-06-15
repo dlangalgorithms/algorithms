@@ -22,3 +22,4 @@ docs/
 
 # Code coverage
 *.lst
+.aider*
