@@ -1,16 +1,17 @@
 import std;
-
 /**
- * Calculates the maximum profit that can be obtained by cutting a rod
- * of length n and selling the pieces based on the given price array.
+ * ## Calculates the maximum profit that can be obtained by cutting a rod, of length n and selling the pieces based on the given price array.
  *
- * @param price an array of integers representing the prices for each 
- *              length of the rod (1-indexed, where price[i-1] is the 
- *              price for a rod of length i).
- * @param n     the total length of the rod.
- * @return      the maximum profit that can be obtained by cutting the rod.
+ * Params:
+ * price = an array of integers representing the prices for each 
+ * length of the rod (1-indexed, where price[i-1] is the 
+ * price for a rod of length i).
+ * n =     the total length of the rod.
+ *
+ * Returns:
+ * the maximum profit that can be obtained by cutting the rod.
  */
-int maxProfitByCuttingRod(int[] price, uint64_t n) {
+int maxProfitByCuttingRod(int[] price, size_t n) {
     // Array to store maximum profits for each length of the rod
     int[] profit = new int[n + 1];
 
