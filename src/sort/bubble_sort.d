@@ -1,13 +1,14 @@
 import std.stdio;
 
 /**
- * Sorts an array of integers in ascending order using the Bubble Sort algorithm.
+ * ## Sorts an array of integers in ascending order using the Bubble Sort algorithm.
  *
- * This algorithm repeatedly steps through the list, compares adjacent elements,
- * and swaps them if they are in the wrong order. The pass through the list is 
- * repeated until the list is sorted.
+ *  This algorithm repeatedly steps through the list, compares adjacent elements,
+ *  and swaps them if they are in the wrong order. The pass through the list is 
+ *  repeated until the list is sorted.
  *
- * @param arr the array of integers to be sorted
+ * Params:
+ * arr = the array of integers to be sorted
  */
 void bubbleSort(int[] arr) {
     // Get the length of the array

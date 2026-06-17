@@ -1,16 +1,17 @@
 import std;
 
 /**
- * The Parser class is responsible for parsing and evaluating mathematical expressions.
+ * ## The Parser class is responsible for parsing and evaluating mathematical expressions.
  */
 class Parser {
     private string input; // The input string containing the expression to parse.
     private int pos;      // The current position in the input string.
 
     /**
-     * Constructs a Parser with the given input string.
+     * **Constructs a Parser with the given input string.**
      *
-     * @param input The string representation of the mathematical expression.
+     * Params:
+     * input The string representation of the mathematical expression.
      */
     this(string input) {
         this.input = input;
@@ -18,9 +19,10 @@ class Parser {
     }
 
     /**
-     * Peeks at the next character in the input without consuming it.
+     * **Peeks at the next character in the input without consuming it.**
      *
-     * @return The next character or '0' if the end of the input is reached.
+     * Returns:
+     * The next character or '0' if the end of the input is reached.
      */
     private char peek() {
         if (pos < input.length) {
@@ -30,9 +32,10 @@ class Parser {
     }
 
     /**
-     * Consumes and returns the next character in the input.
+     * **Consumes and returns the next character in the input.**
      *
-     * @return The next character or '0' if the end of the input is reached.
+     * Returns :
+     * The next character or '0' if the end of the input is reached.
      */
     private char next() {
         if (pos < input.length) {
@@ -52,9 +55,10 @@ class Parser {
     }
 
     /**
-     * Parses an expression, which may consist of terms combined by '+' or '-'.
+     * **Parses an expression, which may consist of terms combined by '+' or '-'.**
      *
-     * @return The result of evaluating the expression as a double.
+     * Returns:
+     * The result of evaluating the expression as a double.
      */
     double parseExpr() {
         double result = parseTerm(); // Start with the first term.
@@ -77,9 +81,10 @@ class Parser {
     }
 
     /**
-     * Parses a term, which may consist of factors combined by '*' or '/'.
+     * **Parses a term, which may consist of factors combined by multiplication or division.**
      *
-     * @return The result of evaluating the term as a double.
+     * Returns: 
+     * The result of evaluating the term as a double.
      */
     double parseTerm() {
         double result = parseFactor(); // Start with the first factor.
@@ -102,9 +107,10 @@ class Parser {
     }
 
     /**
-     * Parses a factor, which may be a number or a nested expression in parentheses.
+     * **Parses a factor, which may be a number or a nested expression in parentheses.**
      *
-     * @return The result of evaluating the factor as a double.
+     * Returns:
+     * The result of evaluating the factor as a double.
      */
     double parseFactor() {
         skipWhitespace(); // Skip any whitespace before processing factor.
@@ -119,9 +125,10 @@ class Parser {
     }
 
     /**
-     * Parses a number from the input string.
+     * **Parses a number from the input `string`.**
      *
-     * @return The parsed number as a double.
+     * Returns: 
+     * The parsed number as a double.
      */
     double parseNumber() {
         skipWhitespace(); // Skip any whitespace before processing number.
